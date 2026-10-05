@@ -59,10 +59,20 @@ The **Flask user app** collection contains all five requests. The **Local Flask*
 
 The database schema and all five endpoints were tested locally through a complete add, read, update, read, delete, and deletion-check sequence. CORS was also checked.
 
-Successful response examples in Postman are still pending because the Postman Desktop Agent was disconnected. To finish, start the agent and Flask server, send POST, both GET requests, PUT, and DELETE, and save each successful response as an example. Confirm the updated user with GET before deleting it, then confirm deletion with GET afterward.
+All five requests were also sent successfully in Postman using the Desktop Agent, with a saved `200 OK` response example for each request. GET confirmed the updated fields after PUT and returned `{}` after DELETE. The test user was removed after verification.
+
+To repeat the demonstration, start Flask and the Postman Desktop Agent, select **Local Flask**, then send POST, both GET requests, PUT, GET again, DELETE, and a final GET. Use the user ID returned by POST in subsequent requests.
 
 ## Git workflow and screenshots
 
 Database operations were committed first on `main`. The REST API was implemented on `rest-api`, then merged into `main`. Both branches are available in this repository.
 
-The [outputs folder](outputs/) contains screenshots of the repository, commit history, Postman environment, and request setup. These are setup screenshots; successful Postman response screenshots are still pending.
+The [outputs folder](outputs/) contains screenshots of the repository, commit history, Postman environment, request setup, and successful responses:
+
+- [POST: created user](outputs/07-postman-post-success.jpg)
+- [GET: all users](outputs/08-postman-get-all-success.jpg)
+- [GET: user by ID](outputs/09-postman-get-user-success.jpg)
+- [PUT: updated user](outputs/10-postman-put-success.jpg)
+- [GET: update confirmed](outputs/11-postman-get-updated.jpg)
+- [DELETE: success](outputs/12-postman-delete-success.jpg)
+- [GET: deletion confirmed](outputs/13-postman-get-deleted.jpg)
